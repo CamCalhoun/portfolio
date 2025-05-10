@@ -31,7 +31,7 @@ export default function Home() {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 1.8, delay: 1.5 }}
+                        transition={{ duration: 1.3, delay: 1.5 }}
                         className="flex flex-col gap-2  drop-shadow-textoutline pointer-events-auto "
                     >
                         <Image
@@ -46,20 +46,30 @@ export default function Home() {
 
                 </div>
                 {/* Content */}
-                <div className="flex flex-col md:flex-row w-full md:w-5/6 lg:w-3/4 lg:text-xl gap-50 pointer-events-auto" >
-                    <div className="md:flex-1 lg:flex-[2]">
-                        <p className="text-base md:text-lg lg:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.3, delay: 1.8 }}
+                    className="flex justify-center items-center"
+                >
+                    <div className="flex flex-col md:flex-row items-center 
+                                    w-full md:w-5/6 gap-20 border-camgreen border-3 
+                                    p-4 rounded-xl bg-camblack/[30%] backdrop-blur-xs" >
+                        <div className="md:flex-1 lg:flex-[2] ">
+                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                            <Image
+                                src='/cat.jpg'
+                                alt='cool cat that shall serve as a placeholder'
+                                width={350}
+                                height={400}
+                                className="rounded-xl object-cover max-w-full h-auto"
+                            />
+                        </div>
                     </div>
-                    <div className="md:flex-1 lg:flex-[1] flex items-center justify-center">
-                        <Image
-                            src='/cat.jpg'
-                            alt='cool cat that shall serve as a placeholder'
-                            width={300}
-                            height={300}
-                            className="rounded-xl object-cover max-w-full h-auto"
-                        />
-                    </div>
-                </div>
+
+                </motion.div>
             </div>
         </div>
     );
