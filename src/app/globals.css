@@ -4,26 +4,17 @@
   --color-camgreen: #00e569;
   --color-camwhite: #e3e7e6;
   --color-camblack: #201f20;
-}
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --drop-shadow-textoutline: 0 1.2px 1.2px rgba(0,0,0,0.8);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
+html, body {
+  background: black; 
+  image-rendering: optimizeQuality;
+  -webkit-backface-visibility: hidden;
   color: var(--foreground);
   font-family: Poppins;
+  pointer-events: auto;
 }
+

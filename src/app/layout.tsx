@@ -40,7 +40,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${nunito.variable} antialiased`}
+                className={`${nunito.variable} antialiased `}
             >
                 <ClientWrapper>
                     {children}
