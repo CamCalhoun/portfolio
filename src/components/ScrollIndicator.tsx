@@ -31,10 +31,10 @@ const ScrollIndicator = () => {
             className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-300 ${visible ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
         >
-            <div className="flex flex-col items-center justify-center space-y-1">
-                <span className="w-5 h-5 border-r-2 border-b-2 border-white transform rotate-45 animate-scroll"></span>
-                <span className="w-5 h-5 border-r-2 border-b-2 border-white transform rotate-45 animate-scroll delay-200"></span>
-                <span className="w-5 h-5 border-r-2 border-b-2 border-white transform rotate-45 animate-scroll delay-400"></span>
+            <div className="flex flex-col items-center justify-center space-y--2">
+                <span className="w-3 h-3 lg:w-5 lg:h-5 border-r-2 border-b-2 border-white transform rotate-45 animate-scroll"></span>
+                <span className="w-3 h-3 lg:w-5 lg:h-5 border-r-2 border-b-2 border-white transform rotate-45 animate-scroll delay-200"></span>
+                <span className="w-3 h-3 lg:w-5 lg:h-5 border-r-2 border-b-2 border-white transform rotate-45 animate-scroll delay-400"></span>
             </div>
         </a>
     )

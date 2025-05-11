@@ -32,7 +32,7 @@ export default function Home() {
     }, [])
 
     return (
-        <div className="text-center text-camwhite min-h-screen p-2 pb-20 gap-12 sm:p-20 relative">
+        <div className="text-center text-camwhite min-h-screen p-10 gap-12  relative">
 
             <div className="flex flex-col items-center gap-4 w-auto  ">
                 <div className="flex flex-col items-center gap-3 w-auto ">
@@ -64,7 +64,7 @@ export default function Home() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.3, delay: 1.5 }}
                     className={`mb-10 sticky top-0 z-50 flex flex-col gap-2
-                               drop-shadow-textoutline pointer-events-auto  transition-all ease-in-out duration-500
+                               drop-shadow-textoutline pointer-events-auto transition-[backdrop-filter] ease-in-out duration-500
                                 ${isSticky ? 'backdrop-blur-md w-screen' : ''}`}
                 >
                     <Image
@@ -89,7 +89,13 @@ export default function Home() {
                                     w-full md:w-5/6 gap-20 border-camgreen border-3 
                                     p-4 rounded-xl bg-camblack/[30%] backdrop-blur-xs relative" >
                         <div className="md:flex-1 lg:flex-[2] ">
-                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto leading-relaxed space-y-4 mt-8 mb-6">
+                                Hi, I'm Cameron, a software developer with a passion for web applications. With over five years of experience, I enjoy solving complex problems and continuously learning. Outside of work, you can find me listening to music, playing video games, skateboarding, or building projects like this one! Feel free to explore my work and background below!
+                            </p>
+
+
                         </div>
                         <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
                             <Image
