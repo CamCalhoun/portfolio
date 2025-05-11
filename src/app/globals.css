@@ -19,3 +19,27 @@ html, body {
   pointer-events: auto;
 }
 
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(10px, 10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 2s infinite;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
