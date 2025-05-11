@@ -4,7 +4,7 @@
   --color-camgreen: #00e569;
   --color-camwhite: #e3e7e6;
   --color-camblack: #201f20;
-  --color-camblackbg: rgba(32, 31, 32, 1)
+  --color-camblackbg: rgba(32, 31, 32, 1);
   --drop-shadow-textoutline: 0 1.2px 1.2px rgba(0,0,0,0.8);
 }
 

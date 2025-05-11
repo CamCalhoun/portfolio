@@ -50,7 +50,7 @@ export default function Home() {
                             initial={{ x: "-40vw", opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 50, damping: 20, delay: 0.6 }}
-                            className="drop-shadow-textoutline ">
+                            className="drop-shadow-textoutline">
                             Welcome to my portfolio
                         </motion.h1>
                     </div>
@@ -67,14 +67,22 @@ export default function Home() {
                                drop-shadow-textoutline pointer-events-auto transition-[backdrop-filter] ease-in-out duration-500
                                 ${isSticky ? 'backdrop-blur-md w-screen' : ''}`}
                 >
-                    <Image
-                        src='/camLogo.png'
-                        alt='Cameron Calhoun'
-                        width='400'
-                        height='50'
-                        className={`md:w-2xl ${isSticky ? 'mx-auto ' : ''}`}
-                    />
-                    <div className="border-camgreen border rounded-xl"></div>
+                    <div className="flex justify-center">
+                        {isSticky && <button className="active:scale-97 drop-shadow-textoutline w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Top</button>}
+                        {isSticky && <button className="active:scale-97 drop-shadow-textoutline w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Tools</button>}
+                        {isSticky && <button className="active:scale-97 drop-shadow-textoutline w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Projects</button>}
+                        <Image
+                            src='/camLogo.png'
+                            alt='Cameron Calhoun'
+                            width='400'
+                            height='50'
+                            className={`drop-shadow-textoutline md:w-2xl ${isSticky ? 'mx-auto ' : ''}`}
+                        />
+                        {isSticky && <button className="active:scale-97 drop-shadow-textoutline w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Education</button>}
+                        {isSticky && <button className="active:scale-97 drop-shadow-textoutline w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Work</button>}
+                        {isSticky && <button className="active:scale-97 drop-shadow-textoutline w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Contact</button>}
+                    </div>
+                    <div className=" border-camgreen border rounded-xl"></div>
                 </motion.div>
 
                 {/* Content */}
@@ -91,7 +99,7 @@ export default function Home() {
                         <div className="md:flex-1 lg:flex-[2] ">
 
 
-                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto leading-relaxed space-y-4 mt-8 mb-6">
+                            <p className="drop-shadow-textoutline text-base md:text-lg lg:text-2xl pointer-events-auto leading-relaxed space-y-4 mt-8 mb-6">
                                 Hi, I'm Cameron, a software developer with a passion for web applications. With over five years of experience, I enjoy solving complex problems and continuously learning. Outside of work, you can find me listening to music, playing video games, skateboarding, or building projects like this one! Feel free to explore my work and background below!
                             </p>
 
@@ -102,7 +110,7 @@ export default function Home() {
                                 src='/cat.jpg'
                                 alt='cool cat that shall serve as a placeholder'
                                 width={350}
-                                height={400}
+                                height={350}
                                 className="rounded-xl object-cover max-w-full h-auto"
                             />
                         </div>
