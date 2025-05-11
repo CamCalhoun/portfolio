@@ -27,8 +27,10 @@ export default function Home() {
 
         const handleResizeWindow = () => setWidth(window.innerWidth)
 
+        handleResizeWindow()
         window.addEventListener("scroll", handleScroll)
         window.addEventListener("resize", handleResizeWindow)
+
         return () => {
             window.removeEventListener("scroll", handleScroll)
             window.removeEventListener("resize", handleResizeWindow)
@@ -37,10 +39,10 @@ export default function Home() {
 
     return (
         <div className="text-center text-camwhite min-h-screen p-10 gap-12  relative">
-
             <div className="flex flex-col items-center gap-4 w-auto  ">
+
+                {/* Welcome message */}
                 <div className="flex flex-col items-center gap-3 w-auto ">
-                    {/* Welcome message */}
                     <div className="Welcome text-3xl md:text-6xl pointer-events-auto">
                         <motion.div
                             initial={{ x: "40vw", opacity: 0 }}
@@ -58,7 +60,6 @@ export default function Home() {
                             Welcome to my portfolio
                         </motion.h1>
                     </div>
-
                 </div>
 
                 {/* Logo + divider */}
@@ -133,6 +134,7 @@ export default function Home() {
                         </div>
                         <div className="grid grid-cols-2 gap-5">
 
+                            {/* Linux */}
                             <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
                                 <a href="https://kernel.org" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
                                     <Image
@@ -149,11 +151,13 @@ export default function Home() {
                                     <p className="text-lg">My preferred environment for working on projects efficiently</p>
                                 </div>
                             </div>
+
+                            {/* React */}
                             <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
                                 <a href="https://react.dev" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src='/react.webp'
-                                        alt='Linux'
+                                        alt='React'
                                         width={75}
                                         height={75}
                                         style={{ transform: 'scaleY(0.97)' }}
@@ -166,11 +170,12 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Next.js */}
                             <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
                                 <a href="https://nextjs.org" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src='/next.png'
-                                        alt='Linux'
+                                        alt='Next.js'
                                         width={75}
                                         height={75}
                                         style={{ transform: 'scaleY(0.97)' }}
@@ -183,11 +188,12 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Tailwind CSS */}
                             <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
                                 <a href="https://tailwindcss.com" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src='/tailwind.png'
-                                        alt='Linux'
+                                        alt='Tailwind'
                                         width={75}
                                         height={75}
                                         style={{ transform: 'scaleY(0.97)' }}
@@ -200,11 +206,12 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Git */}
                             <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
                                 <a href="https://git-scm.com" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src='/git.png'
-                                        alt='Linux'
+                                        alt='Git'
                                         width={75}
                                         height={75}
                                         style={{ transform: 'scaleY(0.97)' }}
@@ -216,11 +223,13 @@ export default function Home() {
                                     <p className="text-lg">Version control system for tracking code changes and collaboration</p>
                                 </div>
                             </div>
+
+                            {/* Vercel */}
                             <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
                                 <a href="https://vercel.com" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src='/vercel.png'
-                                        alt='Linux'
+                                        alt='Vercel'
                                         width={75}
                                         height={75}
                                         style={{ transform: 'scaleY(0.97)' }}
@@ -233,7 +242,6 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     {/* Third Block */}
