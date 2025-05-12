@@ -141,7 +141,7 @@ export default function Home() {
 
 
                             <p className="drop-shadow-textoutline text-base md:text-lg lg:text-2xl pointer-events-auto leading-relaxed space-y-4 mt-8 mb-6">
-                                Hi, I'm Cameron, a software developer with a passion for web applications. With over five years of experience, I enjoy solving complex problems and continuously learning. Outside of work, you can find me listening to music, playing video games, skateboarding, or building projects like this one! Feel free to explore my work and background below!
+                                Hi, I'm Cameron, a software developer with a passion for web applications. With over five years of experience, I enjoy solving complex problems and continuously learning. Outside of work, you can find me listening to music, playing video games, watching sports, or building projects like this one! Feel free to explore my work and background below!
                             </p>
 
 
@@ -159,106 +159,108 @@ export default function Home() {
 
                     <ScrollIndicator />
 
-                    {/* Tools Block */}
-                    <div className="flex flex-col items-center 
+                    <div className="flex flex-col gap-50 justify-center items-center" id="goodbyeScroll">
+                        {/* Tools Block */}
+                        <div className="flex flex-col items-center 
                                     w-auto p-8 gap-5 
                                     rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                        id="tools">
-                        <div className="flex flex-col">
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Tools I use</h1>
-                            <div className="w-full border-camgreen border rounded-xl"></div>
+                            id="tools">
+                            <div className="flex flex-col">
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Tools I use</h1>
+                                <div className="w-full border-camgreen border rounded-xl"></div>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                                {/* Linux */}
+                                <TechCard lnk='https://kernel.org' img='/tux.png' title='Linux' desc='My preferred environment for working on projects efficiently' alt='Linux' />
+                                {/* React */}
+                                <TechCard lnk='https://react.dev' img='/react.webp' title='React' desc='Industry standard frontend library for building dynamic UIs' alt='React' />
+                                {/* Next.js */}
+                                <TechCard lnk='https://nextjs.org' img='/next.png' title='Next.js' desc='Full stack framework for apps with routing, API support, and SSR' alt='Next.js' />
+                                {/* Tailwind CSS */}
+                                <TechCard lnk='https://tailwindcss.com' img='/tailwind.png' title='Tailwind CSS' desc='Utility first CSS framework for rapidly building modern web apps' alt='Tailwind CSS' />
+                                {/* Git */}
+                                <TechCard lnk='https://git-scm.com' img='/git.png' title='Git' desc='Version control system for tracking code changes and collaboration' alt='Git' />
+                                {/* Vercel */}
+                                <TechCard lnk='https://vercel.com' img='/vercel.png' title='Vercel' desc='Platform for deploying Next.js apps with built-in CI/CD' alt='Vercel' />
+
+                            </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-5">
 
-                            {/* Linux */}
-                            <TechCard lnk='https://kernel.org' img='/tux.png' title='Linux' desc='My preferred environment for working on projects efficiently' alt='Linux' />
-                            {/* React */}
-                            <TechCard lnk='https://react.dev' img='/react.webp' title='React' desc='Industry standard frontend library for building dynamic UIs' alt='React' />
-                            {/* Next.js */}
-                            <TechCard lnk='https://nextjs.org' img='/next.png' title='Next.js' desc='Full stack framework for apps with routing, API support, and SSR' alt='Next.js' />
-                            {/* Tailwind CSS */}
-                            <TechCard lnk='https://tailwindcss.com' img='/tailwind.png' title='Tailwind CSS' desc='Utility first CSS framework for rapidly building modern web apps' alt='Tailwind CSS' />
-                            {/* Git */}
-                            <TechCard lnk='https://git-scm.com' img='/git.png' title='Git' desc='Version control system for tracking code changes and collaboration' alt='Git' />
-                            {/* Vercel */}
-                            <TechCard lnk='https://vercel.com' img='/vercel.png' title='Vercel' desc='Platform for deploying Next.js apps with built-in CI/CD' alt='Vercel' />
-
-                        </div>
-                    </div>
-
-                    {/* Projects */}
-                    <div className="flex flex-col md:flex-row items-center 
+                        {/* Projects */}
+                        <div className="flex flex-col md:flex-row items-center 
                                     w-full md:w-5/6 gap-20
                                     p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                        id="projects">
-                        <div className="md:flex-1 lg:flex-[2] ">
-                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            id="projects">
+                            <div className="md:flex-1 lg:flex-[2] ">
+                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                                <Image
+                                    src='/cat.jpg'
+                                    alt='cool cat that shall serve as a placeholder'
+                                    width={350}
+                                    height={400}
+                                    className="rounded-xl object-cover max-w-full h-auto"
+                                />
+                            </div>
                         </div>
-                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                            <Image
-                                src='/cat.jpg'
-                                alt='cool cat that shall serve as a placeholder'
-                                width={350}
-                                height={400}
-                                className="rounded-xl object-cover max-w-full h-auto"
-                            />
-                        </div>
-                    </div>
 
-                    {/* Education */}
-                    <div className="flex flex-col md:flex-row items-center 
+                        {/* Education */}
+                        <div className="flex flex-col md:flex-row items-center 
                                     w-full md:w-5/6 gap-20
                                     p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                        id="education">
-                        <div className="md:flex-1 lg:flex-[2] ">
-                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            id="education">
+                            <div className="md:flex-1 lg:flex-[2] ">
+                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                                <Image
+                                    src='/cat.jpg'
+                                    alt='cool cat that shall serve as a placeholder'
+                                    width={350}
+                                    height={400}
+                                    className="rounded-xl object-cover max-w-full h-auto"
+                                />
+                            </div>
                         </div>
-                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                            <Image
-                                src='/cat.jpg'
-                                alt='cool cat that shall serve as a placeholder'
-                                width={350}
-                                height={400}
-                                className="rounded-xl object-cover max-w-full h-auto"
-                            />
-                        </div>
-                    </div>
 
-                    {/* Work */}
-                    <div className="flex flex-col md:flex-row items-center 
+                        {/* Work */}
+                        <div className="flex flex-col md:flex-row items-center 
                                     w-full md:w-5/6 gap-20
                                     p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                        id="work">
-                        <div className="md:flex-1 lg:flex-[2] ">
-                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            id="work">
+                            <div className="md:flex-1 lg:flex-[2] ">
+                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                                <Image
+                                    src='/cat.jpg'
+                                    alt='cool cat that shall serve as a placeholder'
+                                    width={350}
+                                    height={400}
+                                    className="rounded-xl object-cover max-w-full h-auto"
+                                />
+                            </div>
                         </div>
-                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                            <Image
-                                src='/cat.jpg'
-                                alt='cool cat that shall serve as a placeholder'
-                                width={350}
-                                height={400}
-                                className="rounded-xl object-cover max-w-full h-auto"
-                            />
-                        </div>
-                    </div>
 
-                    {/* Contact */}
-                    <div className="flex flex-col md:flex-row items-center 
+                        {/* Contact */}
+                        <div className="flex flex-col md:flex-row items-center 
                                     w-full md:w-5/6 gap-20
                                     p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                        id="contact">
-                        <div className="md:flex-1 lg:flex-[2] ">
-                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                            <Image
-                                src='/cat.jpg'
-                                alt='cool cat that shall serve as a placeholder'
-                                width={350}
-                                height={400}
-                                className="rounded-xl object-cover max-w-full h-auto"
-                            />
+                            id="contact">
+                            <div className="md:flex-1 lg:flex-[2] ">
+                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                                <Image
+                                    src='/cat.jpg'
+                                    alt='cool cat that shall serve as a placeholder'
+                                    width={350}
+                                    height={400}
+                                    className="rounded-xl object-cover max-w-full h-auto"
+                                />
+                            </div>
                         </div>
                     </div>
                 </motion.div>

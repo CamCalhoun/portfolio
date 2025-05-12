@@ -21,8 +21,8 @@ const TechCard = ({ lnk, img, title, desc, alt }: TechCardProps) => {
                 />
             </a>
             <div className="max-w-xs">
-                <h2 className="text-xl font-bold">{title}</h2>
-                <p className="text-lg">{desc}</p>
+                <h2 className="text-md md:text-lg lg:text-xl font-bold">{title}</h2>
+                <p className="text-sm md:text-md lg:text-lg">{desc}</p>
             </div>
         </div>
     )

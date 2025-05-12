@@ -5,10 +5,10 @@ const ScrollIndicator = () => {
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
-        const target = document.getElementById("second-block")
+        const target = document.getElementById("goodbyeScroll")
 
         if (!target) {
-            console.warn("No element with id 'second-block' found.")
+            console.warn("No element with id 'goodbyeScroll' found.")
             return
         }
 
