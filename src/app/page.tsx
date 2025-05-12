@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from 'next/image';
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { useEffect, useState, useRef } from "react";
-
+import TechCard from "@/components/TechCard";
 
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
     }, [])
 
     return (
-        <div className="text-center text-camwhite min-h-screen p-10 gap-12  relative">
+        <div className="text-center text-camwhite min-h-screen p-10 gap-12  relative" id="top">
             <div className="flex flex-col items-center gap-4 w-auto  ">
 
                 {/* Welcome message */}
@@ -69,13 +69,31 @@ export default function Home() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.3, delay: 1.5 }}
                     className={`mb-10 sticky top-0 z-50 flex flex-col gap-2
-                               drop-shadow-textoutline pointer-events-auto transition-[backdrop-filter] ease-in-out duration-500
+                               drop-shadow-textoutline pointer-events-auto transition-[backdrop-filter] ease-linear duration-500
                                 ${isSticky ? 'backdrop-blur-md w-screen' : ''}`}
                 >
                     <div className="flex justify-center">
-                        {isSticky && width > 768 && <button className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Top</button>}
-                        {isSticky && width > 768 && <button className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Tools</button>}
-                        {isSticky && width > 768 && <button className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Projects</button>}
+                        {isSticky &&
+                            width > 768 &&
+                            <button
+                                className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
+                                onClick={() => document.getElementById("top")?.scrollIntoView({ behavior: "smooth" })}>
+                                Top
+                            </button>}
+                        {isSticky &&
+                            width > 768 &&
+                            <button
+                                className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
+                                onClick={() => document.getElementById("tools")?.scrollIntoView({ behavior: "smooth", block: 'center' })}>
+                                Tools
+                            </button>}
+                        {isSticky &&
+                            width > 768 &&
+                            <button
+                                className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
+                                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: 'center' })}>
+                                Projects
+                            </button>}
                         <Image
                             src='/camLogo.png'
                             alt='Cameron Calhoun'
@@ -83,9 +101,27 @@ export default function Home() {
                             height='50'
                             className={`drop-shadow-textoutline  lg:w-2xl ${isSticky ? 'mx-auto md:w-sm' : 'md:w-lg'}`}
                         />
-                        {isSticky && width > 768 && <button className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Education</button>}
-                        {isSticky && width > 768 && <button className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Work</button>}
-                        {isSticky && width > 768 && <button className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl ">Contact</button>}
+                        {isSticky &&
+                            width > 768 &&
+                            <button
+                                className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
+                                onClick={() => document.getElementById("education")?.scrollIntoView({ behavior: "smooth", block: 'center' })}>
+                                Education
+                            </button>}
+                        {isSticky &&
+                            width > 768 &&
+                            <button
+                                className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
+                                onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth", block: 'center' })}>
+                                Work
+                            </button>}
+                        {isSticky &&
+                            width > 768 &&
+                            <button
+                                className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
+                                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: 'center' })}>
+                                Contact
+                            </button>}
                     </div>
                     <div className=" border-camgreen border rounded-xl"></div>
                 </motion.div>
@@ -127,7 +163,7 @@ export default function Home() {
                     <div className="flex flex-col items-center 
                                     w-auto p-8 gap-5 
                                     rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                        id="second-block">
+                        id="tools">
                         <div className="flex flex-col">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Tools I use</h1>
                             <div className="w-full border-camgreen border rounded-xl"></div>
@@ -135,119 +171,83 @@ export default function Home() {
                         <div className="grid grid-cols-2 gap-5">
 
                             {/* Linux */}
-                            <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
-                                <a href="https://kernel.org" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
-                                    <Image
-                                        src='/tux.png'
-                                        alt='Linux'
-                                        width={75}
-                                        height={75}
-                                        style={{ transform: 'scaleY(0.97)' }}
-                                        className="px-1 py-2  rounded-xl object-cover max-w-full h-auto"
-                                    />
-                                </a>
-                                <div className="max-w-xs">
-                                    <h2 className="text-xl font-bold">Linux</h2>
-                                    <p className="text-lg">My preferred environment for working on projects efficiently</p>
-                                </div>
-                            </div>
-
+                            <TechCard lnk='https://kernel.org' img='/tux.png' title='Linux' desc='My preferred environment for working on projects efficiently' alt='Linux' />
                             {/* React */}
-                            <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
-                                <a href="https://react.dev" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
-                                    <Image
-                                        src='/react.webp'
-                                        alt='React'
-                                        width={75}
-                                        height={75}
-                                        style={{ transform: 'scaleY(0.97)' }}
-                                        className="px-1 py-2  rounded-xl object-cover max-w-full h-auto"
-                                    />
-                                </a>
-                                <div className="max-w-xs">
-                                    <h2 className="text-xl font-bold">React</h2>
-                                    <p className="text-lg">Industry standard frontend library for building dynamic UIs</p>
-                                </div>
-                            </div>
-
+                            <TechCard lnk='https://react.dev' img='/react.webp' title='React' desc='Industry standard frontend library for building dynamic UIs' alt='React' />
                             {/* Next.js */}
-                            <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
-                                <a href="https://nextjs.org" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
-                                    <Image
-                                        src='/next.png'
-                                        alt='Next.js'
-                                        width={75}
-                                        height={75}
-                                        style={{ transform: 'scaleY(0.97)' }}
-                                        className="px-1 py-2  rounded-xl object-cover max-w-full h-auto"
-                                    />
-                                </a>
-                                <div className="max-w-xs">
-                                    <h2 className="text-xl font-bold">Next.js</h2>
-                                    <p className="text-lg">Full stack framework for apps with routing, API support, and SSR</p>
-                                </div>
-                            </div>
-
+                            <TechCard lnk='https://nextjs.org' img='/next.png' title='Next.js' desc='Full stack framework for apps with routing, API support, and SSR' alt='Next.js' />
                             {/* Tailwind CSS */}
-                            <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
-                                <a href="https://tailwindcss.com" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
-                                    <Image
-                                        src='/tailwind.png'
-                                        alt='Tailwind'
-                                        width={75}
-                                        height={75}
-                                        style={{ transform: 'scaleY(0.97)' }}
-                                        className="px-1 py-2  rounded-xl object-cover max-w-full h-auto"
-                                    />
-                                </a>
-                                <div className="max-w-xs">
-                                    <h2 className="text-xl font-bold">Tailwind CSS</h2>
-                                    <p className="text-lg">Utility first CSS framework for rapidly building modern web apps</p>
-                                </div>
-                            </div>
-
+                            <TechCard lnk='https://tailwindcss.com' img='/tailwind.png' title='Tailwind CSS' desc='Utility first CSS framework for rapidly building modern web apps' alt='Tailwind CSS' />
                             {/* Git */}
-                            <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
-                                <a href="https://git-scm.com" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
-                                    <Image
-                                        src='/git.png'
-                                        alt='Git'
-                                        width={75}
-                                        height={75}
-                                        style={{ transform: 'scaleY(0.97)' }}
-                                        className="px-1 py-2  rounded-xl object-cover max-w-full h-auto"
-                                    />
-                                </a>
-                                <div className="max-w-xs">
-                                    <h2 className="text-xl font-bold">Git</h2>
-                                    <p className="text-lg">Version control system for tracking code changes and collaboration</p>
-                                </div>
-                            </div>
-
+                            <TechCard lnk='https://git-scm.com' img='/git.png' title='Git' desc='Version control system for tracking code changes and collaboration' alt='Git' />
                             {/* Vercel */}
-                            <div className="pointer-events-auto border-camgreen border-2 p-1 rounded-md flex text-left">
-                                <a href="https://vercel.com" className="flex items-center justify-center hover:scale-110" target="_blank" rel="noopener noreferrer">
-                                    <Image
-                                        src='/vercel.png'
-                                        alt='Vercel'
-                                        width={75}
-                                        height={75}
-                                        style={{ transform: 'scaleY(0.97)' }}
-                                        className="px-1 py-2  rounded-xl object-cover max-w-full h-auto"
-                                    />
-                                </a>
-                                <div className="max-w-xs">
-                                    <h2 className="text-xl font-bold">Vercel</h2>
-                                    <p className="text-lg">Platform for deploying Next.js apps with built-in CI/CD</p>
-                                </div>
-                            </div>
+                            <TechCard lnk='https://vercel.com' img='/vercel.png' title='Vercel' desc='Platform for deploying Next.js apps with built-in CI/CD' alt='Vercel' />
+
                         </div>
                     </div>
 
-                    {/* Third Block */}
+                    {/* Projects */}
                     <div className="flex flex-col md:flex-row items-center 
                                     w-full md:w-5/6 gap-20
-                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative" >
+                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                        id="projects">
+                        <div className="md:flex-1 lg:flex-[2] ">
+                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                            <Image
+                                src='/cat.jpg'
+                                alt='cool cat that shall serve as a placeholder'
+                                width={350}
+                                height={400}
+                                className="rounded-xl object-cover max-w-full h-auto"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Education */}
+                    <div className="flex flex-col md:flex-row items-center 
+                                    w-full md:w-5/6 gap-20
+                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                        id="education">
+                        <div className="md:flex-1 lg:flex-[2] ">
+                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                            <Image
+                                src='/cat.jpg'
+                                alt='cool cat that shall serve as a placeholder'
+                                width={350}
+                                height={400}
+                                className="rounded-xl object-cover max-w-full h-auto"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Work */}
+                    <div className="flex flex-col md:flex-row items-center 
+                                    w-full md:w-5/6 gap-20
+                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                        id="work">
+                        <div className="md:flex-1 lg:flex-[2] ">
+                            <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                            <Image
+                                src='/cat.jpg'
+                                alt='cool cat that shall serve as a placeholder'
+                                width={350}
+                                height={400}
+                                className="rounded-xl object-cover max-w-full h-auto"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Contact */}
+                    <div className="flex flex-col md:flex-row items-center 
+                                    w-full md:w-5/6 gap-20
+                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                        id="contact">
                         <div className="md:flex-1 lg:flex-[2] ">
                             <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
