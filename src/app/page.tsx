@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { useEffect, useState, useRef } from "react";
 import TechCard from "@/components/TechCard";
+import Carousel from "@/components/Carousel";
 
 
 export default function Home() {
@@ -159,7 +160,9 @@ export default function Home() {
 
                     <ScrollIndicator />
 
+                    {/* Content after this point will make the scroll indicator disappear */}
                     <div className="flex flex-col gap-50 justify-center items-center" id="goodbyeScroll">
+
                         {/* Tools Block */}
                         <div className="flex flex-col items-center 
                                     w-auto p-8 gap-5 
@@ -188,22 +191,15 @@ export default function Home() {
                         </div>
 
                         {/* Projects */}
-                        <div className="flex flex-col md:flex-row items-center 
-                                    w-full md:w-5/6 gap-20
-                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                        <div className="flex flex-col items-center 
+                                    w-auto p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
                             id="projects">
-                            <div className="md:flex-1 lg:flex-[2] ">
-                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div className="flex flex-col gap-2">
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Projects</h1>
+                                <div className="w-full border-camgreen border rounded-xl"></div>
+                                <h2 className=""></h2>
                             </div>
-                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                                <Image
-                                    src='/cat.jpg'
-                                    alt='cool cat that shall serve as a placeholder'
-                                    width={350}
-                                    height={400}
-                                    className="rounded-xl object-cover max-w-full h-auto"
-                                />
-                            </div>
+                            <Carousel />
                         </div>
 
                         {/* Education */}
@@ -264,7 +260,7 @@ export default function Home() {
                         </div>
                     </div>
                 </motion.div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
