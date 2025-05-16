@@ -149,8 +149,8 @@ export default function Home() {
                         </div>
                         <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
                             <Image
-                                src='/cat.jpg'
-                                alt='cool cat that shall serve as a placeholder'
+                                src='/headshot.jpg'
+                                alt='Cameron Calhoun headshot'
                                 width={350}
                                 height={350}
                                 className="rounded-xl object-cover max-w-full h-auto"
