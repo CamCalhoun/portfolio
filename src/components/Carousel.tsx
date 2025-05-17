@@ -75,9 +75,9 @@ const Carousel = () => {
                         itemRefs.current[prev]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
                         setCurrentIndex(prev)
                     }}
-                    className="h-1/5 z-10 bg-camgreen text-black px-3 py-2 rounded-l pointer-events-auto"
+                    className="h-1/5 z-10 border-2 border-camgreen text-camwhite font-bold px-3 py-2 rounded-l pointer-events-auto"
                 >←</button>
-                <div ref={listRef} className="list w-auto gap-10 pointer-events-auto">
+                <div ref={listRef} className="border-camgreen border-1 rounded-xl list w-auto gap-10 pointer-events-auto">
                     {items.map((item, index) => (
                         <div
                             key={index}
@@ -96,7 +96,7 @@ const Carousel = () => {
                         itemRefs.current[next]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
                         setCurrentIndex(next)
                     }}
-                    className="h-1/5  z-10 bg-camgreen text-black px-3 py-2 rounded-r pointer-events-auto"
+                    className="h-1/5  z-10 border-2 border-camgreen text-camwhite font-bold px-3 py-2 rounded-r pointer-events-auto"
                 >→</button>
             </div>
             <div className="indicatorsList pointer-events-auto" aria-hidden>
