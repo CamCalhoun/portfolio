@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 const Carousel = () => {
     const listRef = useRef<HTMLDivElement | null>(null)
     const itemRefs = useRef<HTMLDivElement[]>([])
@@ -53,18 +54,19 @@ const Carousel = () => {
     }, [])
 
     const items = [
-        <div key="1" className="item">1</div>,
-        <div key="2" className="item">2</div>,
-        <div key="3" className="item">3</div>,
-        <div key="4" className="item">4</div>,
-        <Image
-            src='/cat.jpg'
-            alt='cool cat that shall serve as a placeholder'
-            width={350}
-            height={350}
-            className="item rounded-xl object-cover max-w-full h-auto"
-            key="5"
-        />,
+
+        <Link href="/asc">
+            <h2 className="text-2xl ">AI Study Companion</h2>
+            <Image
+                src='/asc.png'
+                alt='AI Study Companion'
+                width={350}
+                height={350}
+                className="item rounded-xl object-cover max-w-full h-auto"
+                key="5"
+            />
+        </Link>
+        ,
     ]
     return (
         <>
@@ -77,7 +79,7 @@ const Carousel = () => {
                     }}
                     className="h-1/5 z-10 border-2 border-camgreen text-camwhite font-bold px-3 py-2 rounded-l pointer-events-auto"
                 >←</button>
-                <div ref={listRef} className="border-camgreen border-1 rounded-xl list w-auto gap-10 pointer-events-auto">
+                <div ref={listRef} className="rounded-xl list w-auto gap-10 pointer-events-auto">
                     {items.map((item, index) => (
                         <div
                             key={index}

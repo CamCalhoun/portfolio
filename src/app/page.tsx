@@ -202,62 +202,204 @@ export default function Home() {
                             <Carousel />
                         </div>
 
+
                         {/* Education */}
-                        <div className="flex flex-col md:flex-row items-center 
-                                    w-full md:w-5/6 gap-20
-                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                            id="education">
-                            <div className="md:flex-1 lg:flex-[2] ">
-                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div className="flex flex-col items-center w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative" id="education">
+                            <div className="flex flex-col items-center gap-2 w-full">
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Education</h1>
+                                <div className="w-full border-camgreen border rounded-xl"></div>
                             </div>
-                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                                <Image
-                                    src='/cat.jpg'
-                                    alt='cool cat that shall serve as a placeholder'
-                                    width={350}
-                                    height={400}
-                                    className="rounded-xl object-cover max-w-full h-auto"
-                                />
+
+                            <div className="flex flex-col gap-8 mt-6 w-full">
+
+                                <div className="flex flex-col md:flex-row items-center gap-6 text-left">
+                                    <div className="md:w-1/3 text-center">
+                                        <Image
+                                            src="/pennwest-logo.png"
+                                            alt="PennWest California Logo"
+                                            width={350}
+                                            height={100}
+                                            className="rounded-xl object-contain mx-auto"
+                                        />
+                                    </div>
+                                    <div className="md:w-2/3 space-y-2">
+                                        <h2 className="text-2xl font-semibold">PennWest California</h2>
+                                        <p className="text-lg text-camgreen">B.S. in Computer Science</p>
+                                        <p className="text-base">August 2020 – May 2025</p>
+                                        <p className="text-base leading-relaxed">
+                                            Relevant Courses: Data Structures, Analysis of Algorithims, Web Programming, Database Design / Programming, Language Translations (Compiler Design).
+                                        </p>
+                                        <p className="text-base leading-relaxed">
+                                            Activities: Peer Tutoring, Peer Mentor, Programming Club member, Gaming Club member, Senior Project on AI Study Companion (ASC).
+                                        </p>
+                                        <p className="pt-2">Transcript available upon request</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
 
                         {/* Work */}
-                        <div className="flex flex-col md:flex-row items-center 
-                                    w-full md:w-5/6 gap-20
-                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                            id="work">
-                            <div className="md:flex-1 lg:flex-[2] ">
-                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div className="flex flex-col items-center w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative" id="work">
+                            <div className="flex flex-col items-center gap-2 w-full">
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Work Experience</h1>
+                                <div className="w-full border-camgreen border rounded-xl"></div>
                             </div>
-                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                                <Image
-                                    src='/cat.jpg'
-                                    alt='cool cat that shall serve as a placeholder'
-                                    width={350}
-                                    height={400}
-                                    className="rounded-xl object-cover max-w-full h-auto"
-                                />
+
+                            <div className="flex flex-col gap-8 mt-6 w-full">
+
+                                {/* Sheetz */}
+                                <div className="flex flex-col md:flex-row items-center gap-6 text-left">
+                                    <div className="md:w-1/3 text-center">
+                                        <Image
+                                            src="/sheetz-logo.png"
+                                            alt="Sheetz Logo"
+                                            width={300}
+                                            height={150}
+                                            className="rounded-xl object-contain mx-auto"
+                                        />
+                                    </div>
+                                    <div className="md:w-2/3 space-y-2">
+                                        <h2 className="text-2xl font-semibold">UEM Technologist Intern</h2>
+                                        <p className="text-lg text-camgreen">Sheetz, Inc.</p>
+                                        <p className="text-base">May 2025 – Present</p>
+                                        <ul className="list-disc list-inside text-base leading-relaxed">
+                                            <li>Collaborated with the Unified Endpoint Management team to improve device deployment workflows.</li>
+                                            <li>Automated routine maintenance tasks using PowerShell and Bash for 2500+ devices.</li>
+                                            <li>Assisted in developing internal documentation and system configurations.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                {/* Peer Tutor */}
+                                <div className="flex flex-col md:flex-row items-center gap-6 text-left">
+                                    <div className="md:w-1/3 text-center">
+                                        <Image
+                                            src="/pennwest-logo.png"
+                                            alt="PennWest Logo"
+                                            width={300}
+                                            height={150}
+                                            className="rounded-xl object-contain mx-auto"
+                                        />
+                                    </div>
+                                    <div className="md:w-2/3 space-y-2">
+                                        <h2 className="text-2xl font-semibold">Peer Tutor</h2>
+                                        <p className="text-lg text-camgreen">PennWest California</p>
+                                        <p className="text-base">August 2023 – May 2025</p>
+                                        <ul className="list-disc list-inside text-base leading-relaxed">
+                                            <li>Provided academic support in computer science and programming fundamentals.</li>
+                                            <li>Customized tutoring strategies based on student learning styles and course content.</li>
+                                            <li>Encouraged student independence and academic confidence through guided problem-solving.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                {/* True Value */}
+                                <div className="flex flex-col md:flex-row items-center gap-6 text-left">
+                                    <div className="md:w-1/3 text-center">
+                                        <Image
+                                            src="/truevalue-logo.webp"
+                                            alt="True Value Logo"
+                                            width={300}
+                                            height={150}
+                                            className="rounded-xl object-contain mx-auto"
+                                        />
+                                    </div>
+                                    <div className="md:w-2/3 space-y-2">
+                                        <h2 className="text-2xl font-semibold">Sales Associate</h2>
+                                        <p className="text-lg text-camgreen">True Value Hardware</p>
+                                        <p className="text-base">May 2023 – May 2025</p>
+                                        <ul className="list-disc list-inside text-base leading-relaxed">
+                                            <li>Assisted customers with product selection and provided knowledgeable hardware support.</li>
+                                            <li>Maintained inventory organization and restocking procedures across departments.</li>
+                                            <li>Handled POS transactions, returns, and special orders with professionalism and accuracy.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
+
+
+
                         {/* Contact */}
-                        <div className="flex flex-col md:flex-row items-center 
-                                    w-full md:w-5/6 gap-20
-                                    p-4 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
-                            id="contact">
-                            <div className="md:flex-1 lg:flex-[2] ">
-                                <p className="text-base md:text-lg lg:text-2xl pointer-events-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div
+                            className="flex flex-col items-center w-full md:w-5/6 p-8 gap-6 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                            id="contact"
+                        >
+                            <div className="flex flex-col items-center gap-2 w-full">
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Contact Me</h1>
+                                <div className="w-full border-camgreen border rounded-xl"></div>
                             </div>
-                            <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
-                                <Image
-                                    src='/cat.jpg'
-                                    alt='cool cat that shall serve as a placeholder'
-                                    width={350}
-                                    height={400}
-                                    className="rounded-xl object-cover max-w-full h-auto"
-                                />
+
+                            <div className="flex flex-col md:flex-row items-center gap-8 mt-6 w-full">
+                                {/* Text Section */}
+                                <div className="md:flex-1 lg:flex-[2] text-left space-y-4 text-xl md:text-2xl pointer-events-auto">
+                                    <p>
+                                        I’m always open to connecting! Feel free to reach out through any of the following platforms:
+                                    </p>
+                                    <ul className="list-disc list-inside space-y-2">
+                                        <li>
+                                            <strong>Email:</strong>{" "}
+                                            <a
+                                                href="mailto:cameron.calhoun01@gmail.com"
+                                                className="text-camgreen hover:underline"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                cameron.calhoun01@gmail.com
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <strong>LinkedIn:</strong>{" "}
+                                            <a
+                                                href="https://linkedin.com/in/cameron-calhoun-b477152b0/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-camgreen hover:underline"
+                                            >
+                                                linkedin.com/in/cameron-calhoun-b477152b0/
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <strong>GitHub:</strong>{" "}
+                                            <a
+                                                href="https://github.com/CamCalhoun"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-camgreen hover:underline"
+                                            >
+                                                github.com/CamCalhoun
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <strong>Resume:</strong>{" "}
+                                            <a
+                                                href="/CameronCalhounResume.pdf"
+                                                download
+                                                className="text-camgreen hover:underline"
+                                            >
+                                                Download PDF
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Image Section */}
+                                <div className="md:flex-1 lg:flex-[1] flex items-center justify-center pointer-events-auto">
+                                    <Image
+                                        src="/contact-photo.tif"
+                                        alt="Contact image"
+                                        width={350}
+                                        height={400}
+                                        className="rounded-xl object-cover max-w-full h-auto"
+                                    />
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
                 </motion.div>
             </div >
