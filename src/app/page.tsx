@@ -196,6 +196,7 @@ export default function Home() {
                             id="projects">
                             <div className="flex flex-col gap-2">
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Projects</h1>
+                                <h2 className="text-lg md:text-xl lg:text-2xl pointer-events-auto">Click to learn more</h2>
                                 <div className="w-full border-camgreen border rounded-xl"></div>
                                 <h2 className=""></h2>
                             </div>
