@@ -37,9 +37,10 @@ export default function ASC() {
                     <p className="text-lg leading-relaxed">
                         AI Study Companion (ASC) was created for my Senior Project course at PennWest California.
                         ASC was inspired by my experience as a peer tutor. A common struggle I faced was finding new
-                        ways to help students grasp material and study in ways that worked for them. Artificial Intelligence—
-                        particularly large language models (LLMs) and generative AI—has often been viewed negatively in education.
-                        I believe it's a powerful tool when used correctly. ASC adapts to the user’s skill level and grows with them.
+                        ways to help students grasp material and study in ways that worked for them. Artificial Intelligence,
+                        particularly large language models (LLMs) and generative AI, has often been viewed negatively in education.
+                        I believe it's a powerful tool when used correctly and sought to explore that idea in this project.
+                        ASC uses these tools to adapt to the user’s skill level and grow with them.
                     </p>
                 </section>
 
@@ -59,7 +60,8 @@ export default function ASC() {
                     <h2 className="text-3xl md:text-4xl font-semibold text-center">Documentation and Links</h2>
                     <div className="h-1 w-20 bg-camgreen mx-auto rounded" />
                     <p className="text-lg leading-relaxed text-center">
-                        Below are links related to ASC. For questions, feel free to reach out via the contact info on the homepage!
+                        Below are links related to ASC. You can find weekly reports when I was building this project,
+                        design documents, and even a user manual! For questions, feel free to reach out via the contact info on the homepage!
                     </p>
                     <div className="flex flex-col md:flex-row justify-center gap-4 text-camgreen text-lg font-medium text-center">
                         <a href="https://ai-study-companion-pwc.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:underline">
