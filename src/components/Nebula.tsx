@@ -1,4 +1,4 @@
-
+import type { IOptions, RecursivePartial, InteractivityDetect } from "tsparticles-engine"
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 import { loadFirePreset } from "@tsparticles/preset-fire";
@@ -20,7 +20,6 @@ const Nebula = () => {
         detectRetina: true,
 
         interactivity: {
-            detectsOn: "screen",
             events: {
                 onHover: {
                     enable: true,
