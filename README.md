@@ -33,6 +33,8 @@ The application will be available at http://localhost:3000.
 
 The site is deployed using Vercel. Commits to the main branch automatically trigger a new deployment.
 
+You can find the live site [here](https://cameroncalhoun.dev).
+
 ## Notes
 
 This project is actively maintained and evolves as new projects, ideas, and technologies are explored.
