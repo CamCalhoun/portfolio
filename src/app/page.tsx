@@ -93,7 +93,7 @@ export default function Home() {
                             width > 768 &&
                             <button
                                 className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
-                                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: 'center' })}>
+                                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
                                 Projects
                             </button>}
                         <Image
@@ -114,7 +114,7 @@ export default function Home() {
                             width > 768 &&
                             <button
                                 className="flex justify-center items-center md:font-bold lg:font-normal active:scale-97 drop-shadow-textoutline md:text-xs lg:text-lg w-20 lg:w-32 px-4 py-2 m-1 border-camgreen hover:border-camwhite hover:text-camgreen border-3 rounded-xl "
-                                onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth", block: 'center' })}>
+                                onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}>
                                 Work
                             </button>}
                         {isSticky &&
@@ -193,13 +193,15 @@ export default function Home() {
 
                         {/* Projects */}
                         <div className="flex flex-col items-center 
-                                    w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                                    w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative scroll-mt-24"
                             id="projects">
-                            <div className="flex flex-col gap-2 w-full">
+                            <div className="flex flex-col gap-2 w-full" >
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Projects</h1>
-                                <h2 className="text-lg md:text-xl lg:text-2xl pointer-events-auto">Click to learn more</h2>
+                                <h2 className="text-lg md:text-xl lg:text-2xl pointer-events-auto">Click on the images to learn more</h2>
                                 <div className="border-camgreen border rounded-xl"></div>
                             </div>
+
+                            {/* ASC */}
                             <div className="flex flex-col md:flex-row gap-8 mt-6 w-full items-center text-left">
                                 <Link href="./asc" className="md:w-1/3 pointer-events-auto">
                                     <Image
@@ -212,10 +214,51 @@ export default function Home() {
                                 </Link>
                                 <div className="md:w-2/3 space-y-2">
                                     <h2 className="text-2xl font-semibold">AI Study Companion</h2>
-                                    <p className="text-lg text-camgreen">Online study tool powered by large language model</p>
-                                    <p className="text-base">August 2024 – April 2025</p>
-                                    <p className="text-base">Senior Project</p>
-                                    <p className="text-base">Web Development, React, Python, Server side programming</p>
+                                    <p className="text-lg text-camgreen">AI-powered web app for generating personalized study materials</p>
+                                    <p className="text-base">August 2024 – April 2025 · Senior Capstone Project</p>
+                                    <p className="text-base">Built a full-stack study assistant that allows users to interact with an LLM to generate summaries, practice questions, and generate flashcards tailored to specific subjects.</p>
+                                    <p className="text-sm"><span className="font-medium">Tech: </span> React, FastAPI(Python), REST APIs, LLM integration</p>
+                                </div>
+                            </div>
+
+                            {/* Portfolio Website */}
+                            <div className="flex flex-col md:flex-row gap-8 mt-6 w-full items-center text-left">
+                                <Link href="./portfolio" className="md:w-1/3 pointer-events-auto">
+                                    <Image
+                                        src="/portfolio.png"
+                                        alt="AI Study Companion"
+                                        width={350}
+                                        height={100}
+                                        className="rounded-xl object-contain mx-auto border-2 border-transparent hover:border-camgreen"
+                                    />
+                                </Link>
+                                <div className="md:w-2/3 space-y-2">
+                                    <h2 className="text-2xl font-semibold">Digital Portfolio</h2>
+                                    <p className="text-lg text-camgreen">Digital resume hosted on a website - this website!</p>
+                                    <p className="text-base">Ongoing</p>
+                                    <p className="text-base">Digitized my resume to allow recruiters and interested parties to view my experience and projects in an easy-to-use format.</p>
+                                    <p className="text-sm"><span className="font-medium">Tech: </span> React, NextJS, Tailwind CSS, Vercel</p>
+                                </div>
+                            </div>
+
+                            {/* WMS Cloud Migration */}
+                            <div className="flex flex-col md:flex-row gap-8 mt-6 w-full items-center text-left">
+                                <Link href="./wms" className="md:w-1/3 pointer-events-auto">
+                                    <Image
+                                        src="/wms.png"
+                                        alt="WMS Cloud Migration"
+                                        width={350}
+                                        height={100}
+                                        className="rounded-xl object-contain mx-auto border-2 border-transparent hover:border-camgreen"
+                                    />
+                                </Link>
+                                <div className="md:w-2/3 space-y-2">
+                                    <h2 className="text-2xl font-semibold">WMS Cloud Migration</h2>
+                                    <p className="text-lg text-camgreen">Migration of Dell Thin Clients to Wyse Management Suite (Cloud)</p>
+                                    <p className="text-base">July 2025 – September 2025 · Sheetz (Change Order)</p>
+                                    <p className="text-base">Took ownership of a project to migrate approximately 1,600 Dell Thin Clients from an on-premises Wyse Management Suite
+                                        deployment to a cloud-hosted solution, improving mangeability and scalability.</p>
+                                    <p className="text-sm"><span className="font-medium">Tech: </span> Dell ThinOS, Wyse Management Suite (Cloud), Windows, Networking</p>
                                 </div>
                             </div>
                         </div>
@@ -257,7 +300,7 @@ export default function Home() {
 
 
                         {/* Work */}
-                        <div className="flex flex-col items-center w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative" id="work">
+                        <div className="flex flex-col items-center w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative scroll-mt-24" id="work">
                             <div className="flex flex-col items-center gap-2 w-full">
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Work Experience</h1>
                                 <div className="w-full border-camgreen border rounded-xl"></div>
