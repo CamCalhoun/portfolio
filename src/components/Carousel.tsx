@@ -56,14 +56,26 @@ const Carousel = () => {
     const items = [
 
         <Link href="/asc">
-            <h2 className="text-2xl ">AI Study Companion</h2>
+            <h2 className="text-2xl">AI Study Companion</h2>
             <Image
                 src='/asc.png'
                 alt='AI Study Companion'
                 width={350}
                 height={350}
                 className="item rounded-xl object-cover max-w-full h-auto"
-                key="5"
+                key="1"
+            />
+        </Link>
+        ,
+        <Link href="/wmsMigration">
+            <h2 className="text-2xl">WMS Cloud Migration</h2>
+            <Image
+                src='/asc.png'
+                alt='WMS Cloud Migration'
+                width={350}
+                height={350}
+                className="item rounded-xl object-cover max-w-full h-auto"
+                key="1"
             />
         </Link>
         ,

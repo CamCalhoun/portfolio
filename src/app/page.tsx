@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { useEffect, useState, useRef } from "react";
 import TechCard from "@/components/TechCard";
+import Link from "next/link";
 import Carousel from "@/components/Carousel";
 
 
@@ -192,17 +193,32 @@ export default function Home() {
 
                         {/* Projects */}
                         <div className="flex flex-col items-center 
-                                    w-auto p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
+                                    w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative"
                             id="projects">
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 w-full">
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl pointer-events-auto">Projects</h1>
                                 <h2 className="text-lg md:text-xl lg:text-2xl pointer-events-auto">Click to learn more</h2>
-                                <div className="w-full border-camgreen border rounded-xl"></div>
-                                <h2 className=""></h2>
+                                <div className="border-camgreen border rounded-xl"></div>
                             </div>
-                            <Carousel />
+                            <div className="flex flex-col md:flex-row gap-8 mt-6 w-full items-center text-left">
+                                <Link href="./asc" className="md:w-1/3 pointer-events-auto">
+                                    <Image
+                                        src="/asc.png"
+                                        alt="AI Study Companion"
+                                        width={350}
+                                        height={100}
+                                        className="rounded-xl object-contain mx-auto border-2 border-transparent hover:border-camgreen"
+                                    />
+                                </Link>
+                                <div className="md:w-2/3 space-y-2">
+                                    <h2 className="text-2xl font-semibold">AI Study Companion</h2>
+                                    <p className="text-lg text-camgreen">Online study tool powered by large language model</p>
+                                    <p className="text-base">August 2024 – April 2025</p>
+                                    <p className="text-base">Senior Project</p>
+                                    <p className="text-base">Web Development, React, Python, Server side programming</p>
+                                </div>
+                            </div>
                         </div>
-
 
                         {/* Education */}
                         <div className="flex flex-col items-center w-full md:w-5/6 p-8 gap-5 rounded-xl bg-camblack/[50%] backdrop-blur-xs relative" id="education">
@@ -214,7 +230,7 @@ export default function Home() {
                             <div className="flex flex-col gap-8 mt-6 w-full">
 
                                 <div className="flex flex-col md:flex-row items-center gap-6 text-left">
-                                    <div className="md:w-1/3 text-center">
+                                    <div className="md:w-1/3">
                                         <Image
                                             src="/pennwest-logo.png"
                                             alt="PennWest California Logo"
